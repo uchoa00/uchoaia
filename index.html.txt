@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Uchoa IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Uchoa IA – Assistente em Tempo Real</h1>
+
+    <video id="screenVideo" autoplay></video>
+
+    <button onclick="startScreenShare()">Compartilhar Tela</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
