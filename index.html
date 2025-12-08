@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Uchoa IA – Assistente ao Vivo</title>
-    <style>
-        body { font-family: Arial; margin: 20px; }
-        #tela { width: 90%; height: 350px; border: 2px solid #333; }
-        #resposta { white-space: pre-wrap; margin-top: 20px; padding: 15px; border: 1px solid #aaa; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UCHÔA IA — Assistente em Tempo Real</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">UCHÔA IA</div>
+      <div class="tag">Assistente em Tempo Real</div>
+    </div>
+  </header>
 
-<h2>Uchoa IA — Assistente Inteligente</h2>
+  <main class="container">
+    <section class="hero">
+      <h1>A tecnologia que ajuda qualquer pessoa a dominar qualquer tarefa.</h1>
+      <p>Compartilhe a sua tela, fale ou escreva — a UCHÔA IA vai orientar passo a passo.</p>
+      <a class="cta" id="test-link" href="#">Testar Agora</a>
+    </section>
 
-<video id="tela" autoplay playsinline></video>
+    <section class="demo">
+      <div class="left">
+        <label>Tela compartilhada</label>
+        <video id="screenVideo" autoplay playsinline></video>
+        <div class="controls">
+          <button id="btnShare">Compartilhar Tela</button>
+          <button id="btnStop">Parar Compartilhamento</button>
+        </div>
+      </div>
 
-<br><br>
+      <div class="right">
+        <label>Converse com a UCHÔA IA</label>
 
-<button onclick="compartilharTela()">📺 Compartilhar Tela</button>
+        <div class="chat" id="chat">
+          <!-- mensagens aparecerão aqui -->
+        </div>
 
-<h3>Digite ou fale com a IA:</h3>
+        <div class="input-row">
+          <input id="textInput" placeholder="Digite ou peça por voz..." />
+          <button id="sendText">Enviar Texto</button>
+        </div>
 
-<textarea id="textoUsuario" rows="3" style="width: 100%;"></textarea>
-<br>
-<button onclick="enviarTexto()">Enviar texto</button>
-<button onclick="gravarAudio()">🎤 Gravar áudio</button>
+        <div class="voice-row">
+          <button id="startRec">Gravar Áudio (microfone)</button>
+          <button id="stopRec" disabled>Parar</button>
+          <small class="hint">A gravação será enviada para transcrição e análise.</small>
+        </div>
 
-<h3>Resposta da IA:</h3>
-<div id="resposta">Aguardando…</div>
+        <div class="status" id="status">Backend: <span id="backendStatus">checando...</span></div>
+      </div>
+    </section>
 
-<audio id="audioResposta" controls></audio>
+    <footer class="foot">
+      <small>Paleta: #1F6FEB #00D1FF #7B4BFF • UCHÔA IA</small>
+    </footer>
+  </main>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
